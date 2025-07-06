@@ -82,7 +82,7 @@ export default function HomePage() {
         </motion.div>
 
         {/* Balloons */}
-        <motion.div className="pt-12 z-0" variants={fadeIn}>
+        <motion.div className="z-20" variants={fadeIn}>
           <FloatingBalloons />
         </motion.div>
       </section>
