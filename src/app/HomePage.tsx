@@ -34,11 +34,16 @@ export default function HomePage() {
       animate="visible"
       variants={staggerContainer}
     >
-      <section className="h-screen relative">
-
+      <section className="h-screen relative flex flex-col">
+      <motion.div className="mt-12 left-0 w-full z-0" variants={fadeIn}>
+          <CyborgTicker />
+        </motion.div>
+        <motion.div className="z-20 py-8" variants={fadeIn}>
+          <FloatingBalloons />
+        </motion.div>
         {/* Call to Action Button */}
         <motion.div
-          className="absolute bottom-[25%] md:bottom-[10%] w-full flex justify-center transform -translate-y-1/2 z-20"
+          className="w-full flex justify-center z-20"
           variants={fadeIn}
         >
           <div className="flex gap-6">
@@ -60,9 +65,7 @@ export default function HomePage() {
         </motion.div>
 
         {/* Ticker */}
-        <motion.div className="absolute top-10 left-0 w-full z-0" variants={fadeIn}>
-          <CyborgTicker />
-        </motion.div>
+        
 
         {/* Monkeys */}
         <motion.div className="absolute hidden md:block top-0 left-[10%] w-48 z-10" variants={fadeIn}>
@@ -82,9 +85,7 @@ export default function HomePage() {
         </motion.div>
 
         {/* Balloons */}
-        <motion.div className="z-20" variants={fadeIn}>
-          <FloatingBalloons />
-        </motion.div>
+
       </section>
 
       {/* Scrolls into next section */}

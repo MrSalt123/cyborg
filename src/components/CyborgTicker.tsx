@@ -17,7 +17,6 @@ export default function CyborgTicker() {
 
         .wrapper {
           width: 100%;
-          max-width: 1536px;
           margin-inline: auto;
           position: relative;
           height: 70px;
