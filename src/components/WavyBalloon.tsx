@@ -3,16 +3,32 @@
 import { useEffect, useRef } from 'react'
 
 export default function MonkeyBalloonNavbar() {
-  const svgRef = useRef(null)
+  const svgRef = useRef<HTMLObjectElement>(null)
 
   useEffect(() => {
-    const svg = svgRef.current
-    if (!svg) return
+    const objectEl = svgRef.current
+    if (!objectEl) return
 
-    const links = svg.querySelectorAll('a')
-    links.forEach(link => {
-      link.setAttribute('style', 'cursor: pointer;')
-    })
+    const onLoad = () => {
+      const svgDoc = objectEl.contentDocument
+      if (!svgDoc) return
+
+      const links = svgDoc.querySelectorAll('a')
+      links.forEach(link => {
+        link.setAttribute('style', 'cursor: pointer;')
+      })
+    }
+
+    // If already loaded
+    if (objectEl.contentDocument) {
+      onLoad()
+    } else {
+      objectEl.addEventListener('load', onLoad)
+    }
+
+    return () => {
+      objectEl.removeEventListener('load', onLoad)
+    }
   }, [])
 
   return (
