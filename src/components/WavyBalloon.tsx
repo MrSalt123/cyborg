@@ -32,7 +32,7 @@ export default function MonkeyBalloonNavbar() {
   }, [])
 
   return (
-    <div className="w-full flex justify-center py-18 md:py-32">
+    <div className="w-full flex justify-center py-32">
       <object
         ref={svgRef}
         type="image/svg+xml"
