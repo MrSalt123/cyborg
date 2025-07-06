@@ -33,19 +33,28 @@ export default function Intro({ onFinish }: { onFinish: () => void }) {
     return (
         <>
             {!hasStarted && (
-                <div className="flex flex-col fixed inset-0 z-50 items-center justify-center">
-                    <div className='flex flex-col items-center'>
-                        <h1>POWER TO THE PEOPLE</h1>
+                <div className="flex flex-col fixed inset-0 z-50 items-center justify-start py-18">
+                    <div className='flex flex-col items-center '>
                         <img src="/cyborg_ticker.png" alt="$cyborg" className='w-[75%] md:w-[20%]' />
                     </div>
-                    <button
-                        onClick={handleStart}
-                        className="px-8 py-4 bg-yellow-400 text-black text-xl font-bold rounded-lg shadow-lg hover:scale-105 transition"
-                    >
-                        ▶ Welcome Soldier
-                    </button>
+
+                    {/* Monkey sitting on the button */}
+                    <div className="relative mt-48">
+                        <img
+                            src="/sitting.png"
+                            alt="sitting"
+                            className="absolute -top-15 md:-top-20 left-3/4 transform -translate-x-1/2 w-[60px] md:w-[80px]"
+                        />
+                        <button
+                            onClick={handleStart}
+                            className="px-8 py-4 bg-yellow-400 text-black text-xl font-bold rounded-lg shadow-lg hover:scale-105 transition"
+                        >
+                            ▶ Welcome Soldier
+                        </button>
+                    </div>
                 </div>
             )}
+
 
             {hasStarted && (
                 <div
