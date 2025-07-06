@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-VariableFont_wght.ttf') format('truetype'); /* not 'ttf' */
+  font-weight: 100 900; /* Range for variable font */
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
+  --background: hsl(56, 100%, 58%);
   --foreground: #171717;
+
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;          /* covers whole viewport */
+  inset: 0;
+  z-index: -1;              /* sits behind everything */
+  background: url('/bg-checkerboard.png') repeat;
+  background-size: 500px 500px;   /* or whatever size you chose */
+  filter: opacity(0.4);    /* 0 = invisible, 1 = full strength */
+}
+
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  font-weight: 700;
+
 }
