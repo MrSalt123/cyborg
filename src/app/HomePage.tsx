@@ -4,14 +4,19 @@ import FloatingBalloons from '@/components/WavyBalloon'
 import CyborgTicker from '@/components/CyborgTicker'
 import MeetTheCyborg from '@/components/MeetTheCyborg'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
-const fadeIn = {
+// Explicitly typed variant definitions to satisfy TypeScript
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: {
