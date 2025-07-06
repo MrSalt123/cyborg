@@ -32,12 +32,12 @@ export default function MonkeyBalloonNavbar() {
   }, [])
 
   return (
-    <div className="w-full flex justify-center py-32">
+    <div className="w-full flex justify-center py-18 md:py-32">
       <object
         ref={svgRef}
         type="image/svg+xml"
         data="/monkeyballoon_3.svg"
-        className="w-[60%] md:w-[20vw] h-auto animate-sway"
+        className="w-[50%] md:w-[20vw] h-auto animate-sway"
       >
         Your browser does not support SVG
       </object>
