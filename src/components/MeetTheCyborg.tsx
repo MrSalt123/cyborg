@@ -15,7 +15,7 @@ export default function MeetTheCyborg() {
             className="w-full max-w-[300px] mb-4"
           />
           <p className="flex-1">
-            Welcome to the $CYBORG Army — a battalion of blockchain-powered apes led by the legendary @realcyborg786. We're not a community. We're not a cult. We're an army.
+            Welcome to the $CYBORG Army — a battalion of blockchain-powered apes led by the legendary @REALCYBORG786. We're not a community. We're not a cult. We're an army.
             <br />
             <br />
             Brick by brick, raid by raid, we're building a decentralized empire. $CYBORG isn't just a coin. It's a movement. A mindset. A mission to return power to the people.
@@ -25,7 +25,7 @@ export default function MeetTheCyborg() {
             <br />
             <br />
             <strong> Join the army. Claim your place in the future.</strong>
-            — @realcyborg786
+            — @REALCYBORG786
           </p>
         </div>
 
