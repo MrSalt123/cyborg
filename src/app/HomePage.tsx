@@ -8,22 +8,18 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <div>
-      {/* SOLUTION: Replaced `min-h-screen` with `min-h-[100dvh]`.
-        The `dvh` unit correctly adapts to the visible screen size on mobile browsers
-        like Safari, fixing the vertical centering issue.
-      */}
       <section className="relative flex min-h-[100dvh] items-start justify-center p-4">
-
         <div className="flex w-full max-w-sm flex-col items-center">
           <div className="w-full">
             <CyborgTicker />
           </div>
 
-          <div className="mt-4 w-full h-56 md:h-80">
+          {/* Reduced height and margins for mobile */}
+          <div className="mt-1 md:mt-4 w-full h-32 sm:h-40 md:h-80">
             <FloatingBalloons />
           </div>
           
-          <a href="/coming-soon" className="block mt-12">
+          <a href="/coming-soon" className="block mt-4 md:mt-12">
             <button className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300">
               <div className="absolute inset-0 border-[4px] border-black -z-10 rounded-none shadow-[4px_4px_0_#000]" />
               <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
