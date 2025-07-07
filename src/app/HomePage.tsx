@@ -15,7 +15,7 @@ export default function HomePage() {
           </div>
 
           {/* Reduced height and margins for mobile */}
-          <div className='flex flex-col h-full items-center'>
+          <div className='flex flex-col h-full items-center -mt-24 md:mt-0'>
           <div className="mt-1 md:mt-4 w-full h-32 sm:h-40 md:h-80">
             <FloatingBalloons />
           </div>

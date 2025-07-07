@@ -3,10 +3,14 @@ import React from 'react';
 
 // Array of image URLs. You can add more image URLs here.
 const imageUrls = [
+  '/img1.jpeg',
+  '/img2.jpeg',
+  '/img3.jpeg',
+  '/img4.jpeg',
+  '/img5.jpeg',
   '/img/monkey.png',
   '/img/monkey2.png',
   '/img/monkey3.png',
-
 ];
 
 /**
