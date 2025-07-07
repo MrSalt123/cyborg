@@ -8,29 +8,34 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <div className="min-h-screen overflow-hidden relative">
-      <section className="relative flex flex-col items-center px-4 pt-8 pb-12 gap-8 h-screen md:justify-center">
+      <section className="relative flex flex-col items-center h-screen md:justify-center">
         {/* Ticker */}
-        <div className="w-full">
-          <CyborgTicker />
-        </div>
+        <div className='flex flex-col'>
+          <div className="w-full">
+            <CyborgTicker />
+          </div>
 
-        {/* Balloons */}
-        <div className="w-full max-w-sm">
-          <FloatingBalloons />
-        </div>
+          <div className='mt-24 flex flex-col items-center gap-4'>
+            {/* Balloons */}
+            <div className="w-full max-w-sm">
+              <FloatingBalloons />
+            </div>
 
-        {/* CTA Button */}
-        <div>
-          <button
-            className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300"
-          >
-            <a href="/coming-soon">
-              <div className="absolute inset-0 border-[4px] border-black -z-10 rounded-none shadow-[4px_4px_0_#000]" />
-              <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
-                CA
-              </div>
-            </a>
-          </button>
+            {/* CTA Button */}
+            <div>
+              <button
+                className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300"
+              >
+                <a href="/coming-soon">
+                  <div className="absolute inset-0 border-[4px] border-black -z-10 rounded-none shadow-[4px_4px_0_#000]" />
+                  <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
+                    CA
+                  </div>
+                </a>
+              </button>
+            </div>
+
+          </div>
         </div>
 
         {/* Monkeys */}
@@ -46,7 +51,7 @@ export default function HomePage() {
           <Image src="/monkeyreading.png" alt="Cyborg Monkey Reading" width={192} height={192} priority />
         </div>
 
-        <div className="absolute bottom-0 md:bottom-[7%] left-0 w-48 z-10">
+        <div className="absolute bottom-[7%] left-0 w-48 z-10">
           <Image src="/rope.png" alt="Rope" width={192} height={192} priority />
         </div>
       </section>
