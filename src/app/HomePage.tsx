@@ -34,11 +34,11 @@ export default function HomePage() {
       animate="visible"
       variants={staggerContainer}
     >
-      <section className="h-[80vh] md:h-[100vh] relative flex flex-col">
+      <section className="h-screem relative flex flex-col">
       <motion.div className="mt-12 left-0 w-full z-0" variants={fadeIn}>
           <CyborgTicker />
         </motion.div>
-        <motion.div className="z-20 py-8" variants={fadeIn}>
+        <motion.div className="z-20" variants={fadeIn}>
           <FloatingBalloons />
         </motion.div>
         {/* Call to Action Button */}
