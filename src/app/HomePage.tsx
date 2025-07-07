@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen overflow-hidden relative">
+    <div>
       <section className="relative flex flex-col items-center h-screen md:justify-center">
         {/* Ticker */}
         <div className='flex flex-col'>
@@ -43,7 +43,7 @@ export default function HomePage() {
           <Image src="/monkey2.png" alt="Cyborg Monkey Left" width={192} height={192} priority />
         </div>
 
-        <div className="absolute hidden md:block top-0 right-[10%] w-48 z-10">
+        <div className="absolute top-0 right-[10%] w-48 z-10">
           <Image src="/monkey_swinging.png" alt="Cyborg Monkey Right" width={192} height={192} priority />
         </div>
 
@@ -51,13 +51,13 @@ export default function HomePage() {
           <Image src="/monkeyreading.png" alt="Cyborg Monkey Reading" width={192} height={192} priority />
         </div>
 
-        <div className="absolute hidden md:block bottom-[7%] left-0 w-48 z-10">
+        <div className="absolute bottom-[7%] left-0 w-48 z-10">
           <Image src="/rope.png" alt="Rope" width={192} height={192} priority />
         </div>
       </section>
 
       {/* Scrolls into next section */}
-      <div>
+      <div className='h-screen'>
         <MeetTheCyborg />
       </div>
     </div>
