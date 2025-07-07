@@ -34,7 +34,7 @@ export default function HomePage() {
       animate="visible"
       variants={staggerContainer}
     >
-      <section className="h-screen relative flex flex-col">
+      <section className="md:h-screen relative flex flex-col">
       <motion.div className="mt-12 left-0 w-full z-0" variants={fadeIn}>
           <CyborgTicker />
         </motion.div>

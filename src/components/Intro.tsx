@@ -43,11 +43,11 @@ export default function Intro({ onFinish }: { onFinish: () => void }) {
                         <img
                             src="/sitting.png"
                             alt="sitting"
-                            className="absolute -top-15 md:-top-20 left-3/4 transform -translate-x-1/2 w-[60px] md:w-[80px]"
+                            className="absolute -top-30 md:-top-37 left-3/4 transform -translate-x-1/2 w-[120px] md:w-[150px]"
                         />
                         <button
                             onClick={handleStart}
-                            className="px-8 py-4 bg-yellow-400 text-black text-xl font-bold rounded-lg shadow-lg hover:scale-105 transition"
+                            className="px-8 py-4 bg-yellow-400 text-black text-xl font-bold rounded-lg shadow-lg transition"
                         >
                             ▶ Welcome Soldier
                         </button>
