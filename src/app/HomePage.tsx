@@ -34,7 +34,7 @@ export default function HomePage() {
       animate="visible"
       variants={staggerContainer}
     >
-      <section className="h-[100vh] relative flex flex-col">
+      <section className="h-[80vh] md:h-[100vh] relative flex flex-col">
       <motion.div className="mt-12 left-0 w-full z-0" variants={fadeIn}>
           <CyborgTicker />
         </motion.div>
@@ -80,7 +80,7 @@ export default function HomePage() {
           <Image src="/monkeyreading.png" alt="Cyborg Monkey Reading" width={192} height={192} priority />
         </motion.div>
 
-        <motion.div className="absolute bottom-[7%] w-48 z-10" variants={fadeIn}>
+        <motion.div className="absolute bottom-0 md:bottom-[7%] w-48 z-10" variants={fadeIn}>
           <Image src="/rope.png" alt="Rope" width={192} height={192} priority />
         </motion.div>
 
