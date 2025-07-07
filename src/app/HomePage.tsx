@@ -19,7 +19,7 @@ export default function HomePage() {
             <FloatingBalloons />
           </div>
           
-          <a href="/coming-soon" className="block mt-4 md:mt-12">
+          <a href="/coming-soon" className="block mt-36 md:mt-12">
             <button className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:translate-x-1 hover:-translate-y-1 transition-transform duration-300">
               <div className="absolute inset-0 border-[4px] border-black -z-10 rounded-none shadow-[4px_4px_0_#000]" />
               <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
