@@ -8,14 +8,14 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <div>
-      <section className="relative flex flex-col items-center h-screen md:justify-center">
+      <section className="relative flex flex-col items-center min-h-[100dvh] md:justify-center py-8">
         {/* Ticker */}
         <div className='flex flex-col'>
           <div className="w-full">
             <CyborgTicker />
           </div>
 
-          <div className='mt-24 flex flex-col items-center gap-4'>
+          <div className='mt-18 flex flex-col items-center gap-4'>
             {/* Balloons */}
             <div className="w-full max-w-sm">
               <FloatingBalloons />
