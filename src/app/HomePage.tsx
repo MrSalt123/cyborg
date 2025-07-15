@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative flex min-h-[100dvh] items-start justify-center p-4">
-        <div className="flex w-full max-w-sm flex-col items-center">
+        <div className="flex w-full flex-col items-center">
           <div className="w-full">
             <CyborgTicker />
           </div>
