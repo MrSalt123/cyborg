@@ -25,12 +25,12 @@ export default function HomePage() {
         {/* This new wrapper handles the vertical centering more robustly */}
         <div className="flex-1 flex items-center justify-center w-full">
             {/* Central Content (Balloons and Button) */}
-            <div className="flex flex-col items-center w-full max-w-lg z-10 -mt-48 md:mt-0">
+            <div className="flex flex-col items-center w-full max-w-lg z-10">
               <div className="w-full">
                 <FloatingBalloons />
               </div>
               
-              <a href="/coming-soon" className="block mt-12 md:mt-16">
+              <a href="/coming-soon" className="block mt-12 md:mt-48">
                 <button className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:scale-105 transition-transform duration-300">
                   <div className="absolute inset-0 border-[4px] border-black -z-10 shadow-[4px_4px_0_#000]" />
                   <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
