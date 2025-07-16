@@ -25,7 +25,7 @@ export default function HomePage() {
         {/* This new wrapper handles the vertical centering more robustly */}
         <div className="flex-1 flex items-center justify-center w-full">
             {/* Central Content (Balloons and Button) */}
-            <div className="flex flex-col items-center w-full max-w-lg z-10">
+            <div className="flex flex-col items-center w-full max-w-lg z-10 -mt-24 md:mt-0">
               <div className="w-full">
                 <FloatingBalloons />
               </div>
