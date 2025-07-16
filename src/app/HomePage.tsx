@@ -55,7 +55,7 @@ export default function HomePage() {
         </div>
 
         {/* Bottom-Right Monkey (Desktop Only) */}
-        <div className="absolute hidden md:block bottom-[5%] right-[5%] w-32 md:w-48 z-20">
+        <div className="absolute hidden md:block bottom-[0%] right-[5%] w-32 md:w-48 z-20">
           <Image src="/monkeyreading.png" alt="Cyborg Monkey Reading" width={192} height={192} priority />
         </div>
 
