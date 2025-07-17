@@ -43,31 +43,31 @@ const ImageGalleryPage = () => {
 
   // Function to show the next image in the modal.
   // It loops back to the beginning if it's the last image.
-  const showNextImage = (e) => {
-    e.stopPropagation(); // Prevent the modal from closing when clicking the button
+  const showNextImage = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
   };
-
-  // Function to show the previous image in the modal.
-  // It loops to the end if it's the first image.
-  const showPrevImage = (e) => {
-    e.stopPropagation(); // Prevent the modal from closing when clicking the button
+  
+  const showPrevImage = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + imageUrls.length) % imageUrls.length);
   };
+  
 
   // Effect to handle keyboard navigation (left/right arrows, Escape key).
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (!isModalOpen) return;
-
+    
       if (e.key === 'ArrowRight') {
-        showNextImage(e);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
       } else if (e.key === 'ArrowLeft') {
-        showPrevImage(e);
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + imageUrls.length) % imageUrls.length);
       } else if (e.key === 'Escape') {
         closeModal();
       }
     };
+    
 
     window.addEventListener('keydown', handleKeyDown);
 
