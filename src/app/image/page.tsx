@@ -31,7 +31,7 @@ const ImageGalleryPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Function to open the modal and set the selected image.
-  const openModal = (index) => {
+  const openModal = (index: number) => {
     setCurrentImageIndex(index);
     setIsModalOpen(true);
   };
