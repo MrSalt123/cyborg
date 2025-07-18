@@ -4,6 +4,7 @@ import CyborgTicker from '@/components/CyborgTicker';
 
 // Array of image URLs.
 const imageUrls = [
+  '/img13.jpeg',
   '/img1.jpeg',
   '/img3.jpeg',
   '/img4.jpeg',
@@ -13,8 +14,8 @@ const imageUrls = [
   '/img8.png',
   '/img9.png',
   '/img10.png',
+  '/img11.png',
   '/img12.png',
-  '/img13.jpeg',
   '/img/monkey.png',
   '/img/monkey2.png',
   '/img/monkey3.png',
