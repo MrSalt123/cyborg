@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { Copy } from 'lucide-react';          // npm install lucide-react
 
 // --- Import Your Actual Components ---
 import CyborgTicker from '@/components/CyborgTicker';
@@ -9,7 +10,7 @@ import FloatingBalloons from '@/components/WavyBalloon';
 import MeetTheCyborg from '@/components/MeetTheCyborg';
 
 // 👉  Put your real contract address here
-const CONTRACT_ADDRESS = '0x1234...ABCD';
+const CONTRACT_ADDRESS = '7xadAU5f8grUYLGq6XmsGvj5YkjiSHB6BQrdSy9mj1Ua';
 
 export default function HomePage() {
   const [copied, setCopied] = useState(false);
@@ -18,7 +19,6 @@ export default function HomePage() {
     try {
       await navigator.clipboard.writeText(CONTRACT_ADDRESS);
       setCopied(true);
-      // Optional: hide the notice after a few seconds
       setTimeout(() => setCopied(false), 3000);
     } catch (err) {
       console.error('Failed to copy CA:', err);
@@ -29,28 +29,29 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <section className="relative w-full min-h-[100dvh] text-white flex flex-col items-center p-4 overflow-hidden">
-        {/* Top Ticker */}
         <div className="w-full z-0">
           <CyborgTicker />
         </div>
 
-        {/* Center Wrapper */}
         <div className="flex-1 flex items-center justify-center w-full">
           <div className="flex flex-col w-full justify-center items-center max-w-lg z-10 -mt-48 md:mt-0">
             <div className="w-full">
               <FloatingBalloons />
             </div>
 
-            {/* Copy-to-Clipboard “CA” */}
-            <button
+            {/* Text + Copy Icon */}
+            <div
               onClick={handleCopy}
-              className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:scale-105 transition-transform duration-300"
+              className="flex items-center gap-2 cursor-pointer select-none group mt-4"
             >
-              <div className="absolute inset-0 border-[4px] border-black -z-10 shadow-[4px_4px_0_#000]" />
-              <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
-                CA
-              </div>
-            </button>
+              <span className="text-black text-2xl font-extrabold tracking-wider">
+              7xadAU5f8grUYLGq6XmsGvj5YkjiSHB6BQrdSy9mj1Ua
+              </span>
+              <Copy
+                size={28}
+                className="text-black stroke-2 group-hover:scale-105 transition-transform"
+              />
+            </div>
 
             {/* Copied notice */}
             {copied && (
