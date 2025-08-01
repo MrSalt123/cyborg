@@ -1,29 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { Copy } from 'lucide-react';          // npm install lucide-react
 
 // --- Import Your Actual Components ---
 import CyborgTicker from '@/components/CyborgTicker';
 import FloatingBalloons from '@/components/WavyBalloon';
 import MeetTheCyborg from '@/components/MeetTheCyborg';
 
-// 👉  Put your real contract address here
-const CONTRACT_ADDRESS = '7xadAU5f8grUYLGq6XmsGvj5YkjiSHB6BQrdSy9mj1Ua';
-
 export default function HomePage() {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    } catch (err) {
-      console.error('Failed to copy CA:', err);
-    }
-  };
 
   return (
     <div>
@@ -39,26 +24,15 @@ export default function HomePage() {
               <FloatingBalloons />
             </div>
 
-            {/* Text + Copy Icon */}
-            <div
-              onClick={handleCopy}
-              className="flex items-center gap-2 cursor-pointer select-none group mt-4"
-            >
-              <span className="text-black text-2xl font-extrabold tracking-wider">
-              7xadAU5f8grUYLGq6XmsGvj5YkjiSHB6BQrdSy9mj1Ua
-              </span>
-              <Copy
-                size={28}
-                className="text-black stroke-2 group-hover:scale-105 transition-transform"
-              />
-            </div>
-
-            {/* Copied notice */}
-            {copied && (
-              <p className="mt-2 text-sm font-semibold text-center text-black">
-                CA copied to clipboard
-              </p>
-            )}
+            {/* CA Button */}
+            <a href="/ca" className="block -mt-24 md:mt-24">
+              <button className="relative px-8 py-4 bg-[#facc15] skew-x-[-12deg] hover:scale-105 transition-transform duration-300">
+                <div className="absolute inset-0 border-[4px] border-black -z-10 shadow-[4px_4px_0_#000]" />
+                <div className="text-black text-2xl md:text-3xl font-extrabold inline-block skew-x-[12deg]">
+                  CA
+                </div>
+              </button>
+            </a>
           </div>
         </div>
 
